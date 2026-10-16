@@ -1,0 +1,12 @@
+{
+  "name": "Unity_InventoryKit.Editor",
+  "rootNamespace": "Unity_InventoryKit.EditorTools",
+  "references": [
+    "Unity_InventoryKit"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "autoReferenced": true
+}

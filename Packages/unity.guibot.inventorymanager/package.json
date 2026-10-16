@@ -1,0 +1,11 @@
+{
+  "name": "unity.guibot.inventorymanager",
+  "displayName": "Guibot Inventory Manager",
+  "version": "0.2.0",
+  "unity": "6000.0",
+  "description": "Gestor de inventario para 2D e 3D: nucleo de dados independente da fisica, pickups 2D/3D, UI uGUI com hotbar e guardar/carregar em JSON.",
+  "keywords": ["inventory", "items", "2d", "3d", "hotbar"],
+  "dependencies": {
+    "com.unity.ugui": "2.0.0"
+  }
+}

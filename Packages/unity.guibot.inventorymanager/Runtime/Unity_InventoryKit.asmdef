@@ -1,0 +1,13 @@
+{
+  "name": "Unity_InventoryKit",
+  "rootNamespace": "Unity_InventoryKit",
+  "references": [
+    "UnityEngine.UI"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "autoReferenced": true,
+  "noEngineReferences": false
+}
