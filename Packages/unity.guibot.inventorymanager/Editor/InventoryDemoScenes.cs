@@ -56,7 +56,9 @@ namespace Unity_InventoryKit.EditorTools
 
             var player = new GameObject("Player");
             player.transform.localScale = Vector3.one * 0.8f;
-            player.AddComponent<SpriteRenderer>().sprite = square;
+            var playerRenderer = player.AddComponent<SpriteRenderer>();
+            playerRenderer.sprite = square;
+            SpriteMaterial.Apply(playerRenderer);
             player.AddComponent<BoxCollider2D>();
             var rb = player.AddComponent<Rigidbody2D>();
             rb.gravityScale = 0f;
@@ -176,6 +178,7 @@ namespace Unity_InventoryKit.EditorTools
             var go = new GameObject(item.displayName + "Pickup2D");
             go.transform.localScale = Vector3.one * 0.5f;
             var r = go.AddComponent<SpriteRenderer>();
+            SpriteMaterial.Apply(r);
             r.sprite = square;
             r.color = item.tint;
             var col = go.AddComponent<CircleCollider2D>();

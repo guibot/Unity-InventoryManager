@@ -29,6 +29,7 @@ namespace Unity_InventoryKit.Demos
             var player = new GameObject("Player");
             player.transform.localScale = Vector3.one * 0.8f;
             var sr = player.AddComponent<SpriteRenderer>();
+            SpriteMaterial.Apply(sr);
             sr.sprite = square;
             player.AddComponent<BoxCollider2D>();
             rb = player.AddComponent<Rigidbody2D>();
@@ -50,6 +51,7 @@ namespace Unity_InventoryKit.Demos
                 go.transform.position = new Vector3(Random.Range(-7f, 7f), Random.Range(-4f, 4f), 0f);
                 go.transform.localScale = Vector3.one * 0.5f;
                 var r = go.AddComponent<SpriteRenderer>();
+                SpriteMaterial.Apply(r);
                 r.sprite = square;
                 r.color = item.tint;
                 var col = go.AddComponent<CircleCollider2D>();

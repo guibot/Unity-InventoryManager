@@ -80,6 +80,7 @@ namespace Unity_InventoryKit.EditorTools
 
                 go = new GameObject(label + " Pickup");
                 var renderer = go.AddComponent<SpriteRenderer>();
+                SpriteMaterial.Apply(renderer);
                 renderer.sprite = sprite;
                 if (item.icon == null)
                 {

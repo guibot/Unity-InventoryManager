@@ -69,6 +69,7 @@ namespace Unity_InventoryKit
             go.transform.localScale = Vector3.one * (target / iconSize / Mathf.Max(0.0001f, transform.lossyScale.x));
 
             var sr = go.AddComponent<SpriteRenderer>();
+            SpriteMaterial.Apply(sr);
             sr.sprite = icon;
             sr.color = item.tint;
 

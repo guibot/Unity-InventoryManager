@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1
+- Corrigido: sprites 2D criados pelo package (jogador, pickups, itens largados, icones) ficavam invisiveis em alguns projetos. Passam a usar o material `Sprites-Default`, que desenha em qualquer renderer.
+- Nota: as cenas de demo ja criadas mantem o material antigo. Apaga a pasta `Assets/InventoryDemo` e volta a correr *Tools > Inventory > Create Demo Scenes*.
+
 ## 0.2.0
 - Largar itens (G), usar itens (E ou botao direito), arrastar para trocar slots, tooltip.
 - Posicao da hotbar e da grelha configuravel; grelha de `Columns x Rows` no `InventoryHolder`.
