@@ -13,11 +13,17 @@ namespace Unity_InventoryKit
         {
             get
             {
-                if (material == null) material = Resources.GetBuiltinResource<Material>("Sprites-Default.mat");
+                if (material != null) return material;
+
+#if UNITY_EDITOR
+                // In the editor use the real built-in asset, so scenes and prefabs keep a valid reference.
+                material = UnityEditor.AssetDatabase.GetBuiltinExtraResource<Material>("Sprites-Default.mat");
+#endif
                 if (material == null)
                 {
+                    // Players: build it from the shader (Sprites/Default is always included).
                     var shader = Shader.Find("Sprites/Default");
-                    if (shader != null) material = new Material(shader);
+                    if (shader != null) material = new Material(shader) { name = "Sprites-Default (runtime)" };
                 }
                 return material;
             }
